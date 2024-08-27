@@ -1,0 +1,28 @@
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "description": "A React component that displays isochrones on Google Maps using OpenRouteService.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "prop-types": "^15.8.0",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0",
+    "babel-loader": "^8.2.5",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.18.2"
+  },
+  "keywords": ["isochrone", "google-maps", "openrouteservice", "react"],
+  "author": "Your Name",
+  "license": "MIT"
+}
