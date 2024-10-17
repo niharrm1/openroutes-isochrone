@@ -1,16 +1,29 @@
-import { useState, useEffect } from 'react';
-import { getIsochrone } from '../utils/getIsochrone';
+const isochroneData = async ({ lat, lng, mode, range, apiKey }) => {
+  try {
+    const response = await fetch(
+      `https://api.openrouteservice.org/v2/isochrones/${mode}?api_key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          locations: [[lng, lat]], // Note: lng, lat order
+          range: [range],
+        }),
+      }
+    );
 
-export const useIsochrone = ({ lat, lng, mode, range, apiKey }) => {
-  const [isochrone, setIsochrone] = useState(null);
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
 
-  useEffect(() => {
-    const fetchIsochrone = async () => {
-      const data = await getIsochrone({ lat, lng, mode, range, apiKey });
-      if (data) setIsochrone(data);
-    };
-    fetchIsochrone();
-  }, [lat, lng, mode, range, apiKey]);
-
-  return isochrone;
+    const data = await response.json();
+    return data; // Return the data instead of saving it in state
+  } catch (error) {
+    console.error('Failed to fetch isochrone:', error);
+    throw error; // Throw the error for the caller to handle
+  }
 };
+
+export default isochroneData;

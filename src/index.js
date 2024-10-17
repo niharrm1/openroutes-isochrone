@@ -1,4 +1,3 @@
-import React from 'react';
-import IsochroneMap from './components/IsochroneMap';
+import  isochroneData  from './hooks/useIsochrone.js';
 
-export { IsochroneMap };
+export { isochroneData };
