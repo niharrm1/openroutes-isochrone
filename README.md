@@ -21,24 +21,7 @@ Before getting started, make sure you have the following:
 - **OpenRouteService API Key** (Get one from [here](https://openrouteservice.org/sign-up/))
 - **Google Maps API Key** (Get one from [Google Cloud Console](https://console.cloud.google.com/))
 
-## Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/isochrone-map-example.git
-cd isochrone-map-example
-```
-
-### 2. Install Dependencies
-
-Install the required dependencies by running:
-
-```bash
-npm install
-```
-
-### 3. Set Up API Keys
+###  Set Up API Keys
 
 You will need to set the API keys for both OpenRouteService and Google Maps.
 
@@ -46,21 +29,13 @@ In the respective components (`IsochroneLeaflet.js` and `IsochroneGoogleMap.js`)
 
 ```javascript
 // OpenRouteService API Key
-const openRouteApiKey = 'YOUR_OPENROUTESERVICE_API_KEY';
+const openRouteApiKey = '5b3ce3597851110001cf624853ae53cac19643158f53f6d90743a59b';  // For testing purpose 
 
 // Google Maps API Key
 const googleMapsApiKey = 'YOUR_GOOGLE_MAPS_API_KEY';
 ```
 
-### 4. Running the Application
 
-To start the application, run:
-
-```bash
-npm start
-```
-
-This will start a development server and open the application in your browser.
 
 ## Code Structure
 
