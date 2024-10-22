@@ -1,6 +1,6 @@
 {
   "name": "react-openroutes-isochrone",
-  "version": "1.0.17",
+  "version": "1.0.21",
   "description": "A React component that displays isochrones on Google Maps using OpenRouteService.",
   "main": "src/index.js",
   "scripts": {
@@ -29,7 +29,10 @@
     "openrouteservice",
     "react"
   ],
-  
   "author": "Nihar Ranjan Mohanta",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niharrm1/openroutes-isochrone.git"
+  }
 }
